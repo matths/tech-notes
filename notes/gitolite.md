@@ -210,3 +210,14 @@ EOF
 **related fun fact:** the user web wouldn't need a sudoers configuration to run `/bin/systemctl status web.service`. status ist accessible anyways.
 
 But you might find more of my notes about [sudo and su](sudo.md) here.
+
+### Hooks in your gitolite admin repo
+
+instead of putting you hooks into `/home/git/local/hooks/repo-specific` on your host,
+you can instead out it inside your repo as `local/hooks/repo-specific/[HOOK FILE]`
+
+in that case you have to uncomment the correct line of your `/home/git/.gitolite.rc`
+
+```plain
+LOCAL_CODE                =>  "$rc{GL_ADMIN_BASE}/local",
+```
