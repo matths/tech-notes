@@ -11,10 +11,17 @@ When running a node server using privileged ports (below 1024, e.g. http-80 and 
 sudo setcap cap_net_bind_service=+ep `readlink -f \`which node\``
 ```
 
+**Attention**
+
+You have to run this command everytime you update node (change to node binary file).
+If you forget, you might wonder why your service isn't coming up again after a restart.
+
+
 chances are high you need to install another package before
 
 ```sh
 sudo apt-get install libcap2-bin
 ```
+
 
 for more information I recommend this gist https://gist.github.com/firstdoit/6389682
