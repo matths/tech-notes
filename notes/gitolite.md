@@ -221,3 +221,6 @@ in that case you have to uncomment the correct line of your `/home/git/.gitolite
 ```plain
 LOCAL_CODE                =>  "$rc{GL_ADMIN_BASE}/local",
 ```
+
+**note:** if you do such changes, especially to the .rc file, be sure to run `bin/gitolite setup` to propagate your changes. Otherwise you wouldn't find out, why it's not working.
+
